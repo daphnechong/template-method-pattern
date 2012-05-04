@@ -5,40 +5,25 @@ namespace TemplateMethod
 {
 	public class Daffodil : Plant
 	{
-		private readonly Bulb _bulb = new Bulb();
 		private readonly List<Leaf> _leaves = new List<Leaf>();
 
 		protected override void EstablishRoots()
 		{
-			Console.WriteLine("Bulb - Creating Roots");
-			_bulb.CreateRoots();
+			Console.WriteLine("Daffodil.EstablishRoots");
 		}
 
 		protected override void SproutLeaves()
 		{
-			Console.WriteLine("Bulb - sprouting some leaves");
+			Console.WriteLine("Daffodil.SproutLeaves");
 			for (int i = 0; i < 5; i++)
 			{
-				var leaf = _bulb.CreateLeaf();
-				_leaves.Add(leaf);
+				_leaves.Add(new Leaf());
 			}
 		}
 
 		protected override void Bloom()
 		{
-			Console.WriteLine("Bulb - blooming. yay!");
-		}
-	}
-
-	public class Bulb
-	{
-		public void CreateRoots()
-		{
-		}
-
-		public Leaf CreateLeaf()
-		{
-			return new Leaf();
+			Console.WriteLine("Daffodil.Bloom - yay!");
 		}
 	}
 

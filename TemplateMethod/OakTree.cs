@@ -5,41 +5,25 @@ namespace TemplateMethod
 	public class OakTree : Plant
 	{
 		private readonly Acorn _acorn = new Acorn();
-		private Trunk _trunk = new Trunk();
 
 		protected override void EstablishRoots()
 		{
-			Console.WriteLine("Oak tree - establishing roots");
+			Console.WriteLine("Oak tree.EstablishRoots");
 			_acorn.Split();
 			_acorn.CreateRoots();
 		}
 
 		protected override void SproutLeaves()
 		{
-			Console.WriteLine("Oak tree - sprouting some leaves.");
-			_trunk.AddLeaf();
-			_trunk.AddLeaf();
-			_trunk.AddLeaf();
+			Console.WriteLine("Oak tree.SproutLeaves");
 		}
 
 		protected override void Bloom()
 		{
-			Console.WriteLine("Oak Tree - growing some acorns. Yay!");
-			_trunk.GrowAcorns();
+			Console.WriteLine("Oak Tree.Bloom - Yay!");
 		}
 	}
-
-	public class Trunk
-	{
-		public void AddLeaf()
-		{
-		}
-
-		public void GrowAcorns()
-		{
-		}
-	}
-
+	
 	public class Acorn
 	{
 		public void Split()

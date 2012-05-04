@@ -4,17 +4,17 @@ namespace TemplateMethod
 {
 	public abstract class Plant	
 	{
-		 public void Grow()
-		 {
-		 	AbsorbWater();
-		 	EstablishRoots();
-		 	SproutLeaves();
-		 	Bloom();
-		 }
+		public void Grow()
+		{
+			AbsorbWater();
+			EstablishRoots();
+			SproutLeaves();
+			Bloom();
+		}
 
 		private void AbsorbWater()
 		{
-			Console.WriteLine("Plant - absorb some water");
+			Console.WriteLine("Plant.AbsorbWater");
 		}
 
 		protected abstract void EstablishRoots();

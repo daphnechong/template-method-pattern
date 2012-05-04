@@ -17,6 +17,7 @@ namespace TemplateMethod
 			foreach(var plant in plants)
 			{
 				plant.Grow();
+				Console.WriteLine();
 			}
 
 			Console.ReadLine();
